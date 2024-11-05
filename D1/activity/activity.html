@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Acitvity 1</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 style="font-size: 40px; color: red">Activity</h1>
+      </section>
+      <section>
+        <h1>Welcome to Cafe Delights</h1>
+        <p>Your cozy corner for the best coffee and treats in town.</p>
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below</p>
+      </section>
+      <br />
+      <section>
+        <form action="" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <br /><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <br /><br />
+
+            <label for="phonenumber">Phone Number:</label>
+            <input
+              type="tel"
+              id="phonenumber"
+              name="phonenumber"
+              placeholder="123-456-7890"
+              required
+            /><br /><br />
+
+            <label for="DOB">Date of Birth:</label>
+            <input type="date" id="DOB" name="DOB" required />
+            <br /><br />
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Visit Information</legend>
+            <label for="visit-date">Preferred Visit Date:</label>
+            <input type="date" id="visit-date" name="visit-date" required />
+            <br /><br />
+
+            <label for="visit-time">Preferred Time:</label>
+            <input
+              type="time"
+              id="visit-time"
+              name="visit-time"
+              required
+            /><br /><br />
+
+            <label>Are you a returning customer?</label> <br />
+            <input type="radio" id="yes" name="returning" value="yes" />
+            <label for="yes">Yes</label><br />
+            <input type="radio" id="no" name="returning" value="no" />
+            <label for="no">No</label><br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend><strong>Order Preferences</strong></legend>
+            <label for="favorite-drink">Favorite Drink:</label>
+            <select id="favorite-drink" name="favorite-drink">
+              <option value="latte">Latte</option>
+              <option value="espresso">Espresso</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="tea">Tea</option></select
+            ><br /><br />
+
+            <p>Select your dietary preferences:</p>
+            <input
+              type="checkbox"
+              id="vegan"
+              name="dietary-preference"
+              value="vegan"
+            />
+            <label for="vegan">Vegan</label><br />
+            <input
+              type="checkbox"
+              id="vegetarian"
+              name="dietary-preference"
+              value="vegetarian"
+            />
+            <label for="vegetarian">Vegetarian</label><br />
+            <input
+              type="checkbox"
+              id="gluten-free"
+              name="dietary-preference"
+              value="gluten-free"
+            />
+            <label for="gluten-free">Gluten-free</label><br /><br />
+          </fieldset>
+          <br />
+
+          <!-- Feedback Section -->
+          <fieldset>
+            <legend><strong>Feedback</strong></legend>
+            <label for="rating">Rate Your Last Visit (1-5):</label>
+            <input
+              type="range"
+              id="rating"
+              name="rating"
+              min="1"
+              max="5"
+            /><br /><br />
+
+            <label for="comments">Additional Comments:</label><br />
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              placeholder="Tell us your experience"
+            ></textarea
+            ><br /><br />
+
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter"
+              >Would you like to receive our newsletter?</label
+            ><br /><br />
+          </fieldset>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
