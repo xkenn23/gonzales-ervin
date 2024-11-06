@@ -1,0 +1,277 @@
+* {
+  margin: 0; /* removes the defualt margin*/
+  padding: 0; /* removes the defualt padding*/
+  box-sizing: border-box; /* ensures padding and border to not increase*/
+}
+:root {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.navlinks ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navlinks li {
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.navCTA i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background-color: #fff;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #000;
+}
+
+.hero h1 .highlight {
+  color: #d3a400; /* Gold color for "Food" */
+}
+
+.hero p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d3a400; /* Gold color for button */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.hero-right img {
+  width: 700px;
+  height: auto;
+  margin-right: 100px; /* Moves the image 100px to the left */
+}
+
+/* About Section */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background-color: #fff;
+}
+
+.about-left {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left img {
+  width: 700px;
+  height: auto;
+  margin-left: 100px;
+}
+
+.about-right {
+  max-width: 45%;
+}
+
+.about h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+
+.about h1 .highlight {
+  color: #d3a400;
+}
+
+.about h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.about p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d3a400; /* Gold color for button */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* TODO ADD MISSING SECTIONS HERE */
+
+/* Our Team Section */
+.Our-Team {
+  text-align: center;
+  padding: 50px 100px;
+  background-image: url("images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Our-Team h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.Our-Team h1 .highlight {
+  color: #d3a400;
+}
+
+.Team-Photo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* .Team-Photo div {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+} */
+
+.Team-Photo div:hover {
+  transform: scale(1.05);
+  transition: 0.3s; /* Slightly zoom on hover */
+}
+
+.photo-container {
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height to create a square */
+  padding: 30px; /* Inner padding inside the circular container */
+  border-radius: 50%; /* Makes the container circular */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Team-Photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-section .social-links a {
+  margin: 0 5px;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-section .social-links a:hover {
+  color: #d3a400; /* Highlight color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-bottom span {
+  color: #d3a400; /* Gold color for designer name */
+  font-weight: bold;
+}

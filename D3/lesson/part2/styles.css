@@ -1,0 +1,36 @@
+/* Universal Selector*/
+
+* {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ID Selector*/
+
+#main-title {
+  background-color: #332;
+  color: wheat;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Class Selector*/
+
+.highlight {
+  color: teal;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Attribute Selector*/
+
+[data-action="submit"] {
+  background-color: bisque;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: progress;
+}

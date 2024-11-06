@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Basics</title>
+    <!---Link External Style Sheet-->
+    <link rel="stylesheet" href="styles.css" />
+    <!---Internal CSS-->
+    <!--Specificity in CSS helps determine which styles are applied when multiple selectors target the same element.
+    Inline styles (e.g., style="color: darkgreen;") have the highest specificity.
+
+    ID selectors (e.g., #header) are more specific than classes or type selectors.
+
+    Class selectors (e.g., .highlight) and attribute selectors have medium specificity.
+
+    Type selectors (e.g., p) have the lowest specificity.-->
+    <style>
+      header {
+        background-color: black;
+        color: aqua;
+        text-align: center;
+        padding: 10em;
+      }
+    </style>
+  </head>
+  <body>
+    <!---Header Section-->
+    <header>
+      <h1>Welcome To CSS</h1>
+    </header>
+    <section>
+      <p>This is a paragraph to demonstate CSS</p>
+      <p style="color: green">This is a paragraph to demonstate CSS</p>
+    </section>
+  </body>
+</html>
