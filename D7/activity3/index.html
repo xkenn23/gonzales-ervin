@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shopping-cart">
+      <h1>Shopping Cart</h1>
+
+      <!-- Cart Section -->
+      <div class="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: ₱0.00</p>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+
+      <!-- Products Section -->
+      <div class="products-section">
+        <h2>Products</h2>
+        <ul id="product-list">
+          <li>
+            RTX 4090 Price: ₱67,000
+            <button
+              class="add-to-cart-btn"
+              data-name="RTX 4090"
+              data-price="67000"
+            >
+              Add to Cart
+            </button>
+          </li>
+          <li>
+            Iphone 27 Price: ₱27,000
+            <button
+              class="add-to-cart-btn"
+              data-name="Iphone 27"
+              data-price="27000"
+            >
+              Add to Cart
+            </button>
+          </li>
+          <li>
+            Mac Mini M4 Price: ₱20,000
+            <button
+              class="add-to-cart-btn"
+              data-name="Mac Mini M4"
+              data-price="20000"
+            >
+              Add to Cart
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Total Purchase Section -->
+      <div class="total-purchase">
+        <h1>Total Purchase: ₱0.00</h1>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

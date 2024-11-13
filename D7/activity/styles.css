@@ -1,0 +1,59 @@
+/* Center the form on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures full viewport height */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Optional: adds a clean font */
+  background-color: #f4f4f9; /* Optional: background color for contrast */
+}
+
+/* Form styling */
+#myForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Set a max width to control the form width */
+  gap: 15px;
+  padding: 20px; /* Adds padding around the form */
+  background-color: #ffffff; /* Background color for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Style for labels */
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff; /* Blue color for button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
