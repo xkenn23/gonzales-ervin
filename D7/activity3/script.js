@@ -1,7 +1,7 @@
 const cartItems = [];
 const cartList = document.getElementById("cart-items");
 const totalPriceElement = document.getElementById("total-price");
-const totalPurchaseElement = document.querySelector(".total-purchase h1"); // Corrected selector
+const totalPurchaseElement = document.querySelector(".total-purchase h1");
 
 // Event listeners for Add to Cart buttons
 document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
@@ -12,7 +12,6 @@ document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
   });
 });
 
-// Add to Cart function
 function addToCart(name, price) {
   const existingItem = cartItems.find((item) => item.name === name);
 
