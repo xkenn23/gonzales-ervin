@@ -1,0 +1,58 @@
+/* Product Container for Cards */
+#productContainer {
+  display: grid; /* Use Grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  gap: 16px; /* Space between cards */
+  justify-items: stretch; /* Ensure all cards stretch to fill their grid cell */
+  align-items: stretch; /* Ensure all cards stretch vertically to align properly */
+  width: 100%; /* Full container width */
+  max-width: 1200px; /* Optional: Limit maximum width for cleaner design */
+  margin: auto; /* Center the grid container */
+  padding: 20px; /* Optional: Add padding around the grid */
+}
+
+/* Card Styles */
+.card {
+  max-height: 350px; /* Limit the card height */
+  padding: 5px; /* Add padding around the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for aesthetics */
+  border-radius: 5px; /* Slightly round the corners */
+  overflow: hidden; /* Prevent content overflow */
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Space out card content */
+  align-items: flex-start; /* Left-align content inside the card */
+}
+
+/* Image Styles */
+.card-img-top {
+  width: 100%; /* Make the image span the full width of the card */
+  height: 150px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image fits within the dimensions without distortion */
+}
+
+/* Title and Text Alignment */
+.card-title,
+.card-text {
+  text-align: left; /* Left-align text */
+  margin-bottom: 10px; /* Add spacing between elements */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+  #productContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #productContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  #productContainer {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
