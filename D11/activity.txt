@@ -1,0 +1,106 @@
+Done with Step 1 and Step 2
+
+Step 3:
+
+A. Create Operation:
+// Insert at least three book documents with different fields such as title, author, genre, and publication year.
+
+db.Books.insertMany([
+  {
+    title: "Lord of the Flies",
+    author: {
+      name: "Stephen King",
+      age: 65
+    },
+    genre: "Horror",
+    publishedYear: 1960
+  },
+  {
+    title: "1984",
+    author: {
+      name: "George Orwell",
+      age: 46
+    },
+    genre: "Dystopian",
+    publishedYear: 1949
+  },
+  {
+    title: "Moby Dick",
+    author: {
+      name: "Herman Melville",
+      age: 72
+    },
+    genre: "Adventure",
+    publishedYear: 1851
+  }
+  {
+    title: "Harry Potter",
+    author: {
+      name: "JK Rowling",
+      age: 72
+    },
+    genre: "Magic",
+    publishedYear: 2004
+  }
+]);
+
+B. Read Operation:
+// Retrieve all the book documents in the "Books" collection.
+
+db.Books.find();
+
+// Retrieve a specific book document based on its title or author.
+
+db.Books.find({ "author.name": "JK Rowling" });
+
+C. Update Operation:
+// Update the genre of a book document.
+
+db.Books.updateOne({genre: 'Magic'}, {$set: {genre: 'Magic2x'}})
+
+// Update the publication year of a book document.
+
+db.Books.updateOne({publishedYear: 2004}, {$set: {publishedYear: 2020}})
+
+
+D. Delete Operation:
+// Delete a book document based on its title or author.
+
+db.Books.deleteOne({title: 'Moby Dick'})
+
+
+// Step 4: After each operation, verify the changes by re-reading the data from the "Books" collection.
+
+db.Books.find()
+
+{
+  _id: ObjectId('673c916abdf333476298f45f'),
+  title: 'Lord of the Flies',
+  author: {
+    name: 'Stephen King',
+    age: 65
+  },
+  genre: 'Horror',
+  publishedYear: 1960
+},
+{
+  _id: ObjectId('673c916abdf333476298f460'),
+  title: '1984',
+  author: {
+    name: 'George Orwell',
+    age: 46
+  },
+  genre: 'Dystopian',
+  publishedYear: 1949
+}
+{
+  _id: ObjectId('673c916abdf333476298f462'),
+  title: 'Harry Potter',
+  author: {
+    name: 'JK Rowling',
+    age: 72
+  },
+  genre: 'Magic2x',
+  publishedYear: 2020
+}
+
