@@ -1,0 +1,204 @@
+Done with Step 1 and Step 2
+
+
+ Step 3: Insert the following 20 sample documents into the Movies collection:
+
+db.Movies.insertMany([
+  { "_id": 1, "title": "Inception", "director": "Christopher Nolan", "genre": "Sci-Fi", "year": 2010, "rating": 8.8 },
+  { "_id": 2, "title": "The Matrix", "director": "The Wachowskis", "genre": "Sci-Fi", "year": 1999, "rating": 8.7 },
+  { "_id": 3, "title": "Titanic", "director": "James Cameron", "genre": "Romance", "year": 1997, "rating": 7.8 },
+  { "_id": 4, "title": "The Godfather", "director": "Francis Ford Coppola", "genre": "Crime", "year": 1972, "rating": 9.2 },
+  { "_id": 5, "title": "The Dark Knight", "director": "Christopher Nolan", "genre": "Action", "year": 2008, "rating": 9.0 },
+  { "_id": 6, "title": "Forrest Gump", "director": "Robert Zemeckis", "genre": "Drama", "year": 1994, "rating": 8.8 },
+  { "_id": 7, "title": "Pulp Fiction", "director": "Quentin Tarantino", "genre": "Crime", "year": 1994, "rating": 8.9 },
+  { "_id": 8, "title": "Avengers: Endgame", "director": "Anthony Russo, Joe Russo", "genre": "Action", "year": 2019, "rating": 8.4 },
+  { "_id": 9, "title": "Jurassic Park", "director": "Steven Spielberg", "genre": "Adventure", "year": 1993, "rating": 8.1 },
+  { "_id": 10, "title": "The Shawshank Redemption", "director": "Frank Darabont", "genre": "Drama", "year": 1994, "rating": 9.3 },
+  { "_id": 11, "title": "Star Wars: A New Hope", "director": "George Lucas", "genre": "Sci-Fi", "year": 1977, "rating": 8.6 },
+  { "_id": 12, "title": "Interstellar", "director": "Christopher Nolan", "genre": "Sci-Fi", "year": 2014, "rating": 8.6 },
+  { "_id": 13, "title": "Gladiator", "director": "Ridley Scott", "genre": "Action", "year": 2000, "rating": 8.5 },
+  { "_id": 14, "title": "The Lion King", "director": "Roger Allers, Rob Minkoff", "genre": "Animation", "year": 1994, "rating": 8.5 },
+  { "_id": 15, "title": "Schindler's List", "director": "Steven Spielberg", "genre": "Drama", "year": 1993, "rating": 9.0 },
+  { "_id": 16, "title": "Braveheart", "director": "Mel Gibson", "genre": "Drama", "year": 1995, "rating": 8.3 },
+  { "_id": 17, "title": "The Avengers", "director": "Joss Whedon", "genre": "Action", "year": 2012, "rating": 8.0 },
+  { "_id": 18, "title": "Frozen", "director": "Chris Buck, Jennifer Lee", "genre": "Animation", "year": 2013, "rating": 7.4 },
+  { "_id": 19, "title": "The Lord of the Rings: The Fellowship of the Ring", "director": "Peter Jackson", "genre": "Fantasy", "year": 2001, "rating": 8.8 },
+  { "_id": 20, "title": "The Social Network", "director": "David Fincher", "genre": "Drama", "year": 2010, "rating": 7.7 }
+])
+
+
+Task 2: Query the Data
+2.1 Query 1: Retrieve all movies with a rating of 8.5 or higher.
+
+db.Movies.find({rating: {$gt: 8.5}})
+
+{
+  _id: 1,
+  title: 'Inception',
+  director: 'Christopher Nolan',
+  genre: 'Sci-Fi',
+  year: 2010,
+  rating: 8.8
+}
+{
+  _id: 2,
+  title: 'The Matrix',
+  director: 'The Wachowskis',
+  genre: 'Sci-Fi',
+  year: 1999,
+  rating: 8.7
+}
+{
+  _id: 4,
+  title: 'The Godfather',
+  director: 'Francis Ford Coppola',
+  genre: 'Crime',
+  year: 1972,
+  rating: 9.2
+}
+{
+  _id: 5,
+  title: 'The Dark Knight',
+  director: 'Christopher Nolan',
+  genre: 'Action',
+  year: 2008,
+  rating: 9
+}
+{
+  _id: 6,
+  title: 'Forrest Gump',
+  director: 'Robert Zemeckis',
+  genre: 'Drama',
+  year: 1994,
+  rating: 8.8
+}
+{
+  _id: 7,
+  title: 'Pulp Fiction',
+  director: 'Quentin Tarantino',
+  genre: 'Crime',
+  year: 1994,
+  rating: 8.9
+}
+{
+  _id: 10,
+  title: 'The Shawshank Redemption',
+  director: 'Frank Darabont',
+  genre: 'Drama',
+  year: 1994,
+  rating: 9.3
+}
+{
+  _id: 11,
+  title: 'Star Wars: A New Hope',
+  director: 'George Lucas',
+  genre: 'Sci-Fi',
+  year: 1977,
+  rating: 8.6
+}
+{
+  _id: 12,
+  title: 'Interstellar',
+  director: 'Christopher Nolan',
+  genre: 'Sci-Fi',
+  year: 2014,
+  rating: 8.6
+}
+{
+  _id: 15,
+  title: "Schindler's List",
+  director: 'Steven Spielberg',
+  genre: 'Drama',
+  year: 1993,
+  rating: 9
+}
+{
+  _id: 19,
+  title: 'The Lord of the Rings: The Fellowship of the Ring',
+  director: 'Peter Jackson',
+  genre: 'Fantasy',
+  year: 2001,
+  rating: 8.8
+}
+
+
+2.2 Query 2: Retrieve all movies directed by "Christopher Nolan."
+
+db.Movies.find({director: 'Christopher Nolan'})
+
+{
+  _id: 1,
+  title: 'Inception',
+  director: 'Christopher Nolan',
+  genre: 'Sci-Fi',
+  year: 2010,
+  rating: 8.8
+}
+{
+  _id: 5,
+  title: 'The Dark Knight',
+  director: 'Christopher Nolan',
+  genre: 'Action',
+  year: 2008,
+  rating: 9
+}
+{
+  _id: 12,
+  title: 'Interstellar',
+  director: 'Christopher Nolan',
+  genre: 'Sci-Fi',
+  year: 2014,
+  rating: 8.6
+}
+
+Task 3: Update the Data
+3.1 Update 1: Update the genre of "The Social Network" to "Biography."
+
+db.Movies.updateOne({title: 'The Social Network'}, {$set: {genre: 'Biography'}})
+
+{
+  _id: 20,
+  title: 'The Social Network',
+  director: 'David Fincher',
+  genre: 'Biography',
+  year: 2010,
+  rating: 7.7
+}
+
+
+3.2 Update 2: Increase the rating of all movies released before 2000 by 0.2 points.
+
+db.Movies.updateMany({year: {$lt: 2000}}, {$set:{rating: {$add: [$rating, 0.2]}}})
+
+
+
+
+Task 4: Delete Data
+4.1 Delete 1: Delete all movies with a rating lower than 8.0.
+
+db.Movies.deleteMany({rating: {$lt: 8.0}})
+
+
+
+
+Task 5: Drop the Database
+5.1 Drop the Database: Delete the entire MovieRental database.
+
+db.dropDatabase()
+user is not allowed to do action [dropDatabase] on [MovieRental.]
+
+Comment: 
+
+Sorry I was unable to drop the database using mongoshell. 
+it is giving an error that I am unauthorized to execute the command to drop the db.
+
+db.runCommand({ connectionStatus: 1 }).authInfo
+
+{
+  authenticatedUsers: [ { user: 'ervin', db: 'admin' } ],
+  authenticatedUserRoles: [ { role: 'readWriteAnyDatabase', db: 'admin' } ]
+}
+
+I decided to delete the MovieRental collection through the browser instead.
+
+
