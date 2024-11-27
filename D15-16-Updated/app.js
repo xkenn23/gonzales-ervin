@@ -14,10 +14,12 @@ app.use(express.json());
 // Import Routes
 import authRoutes from "./routes/authRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
 
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/blog", blogRoutes);
+app.use("/api/comment", commentRoutes);
 
 // MongoDB connection
 const connectToDatabase = async () => {
