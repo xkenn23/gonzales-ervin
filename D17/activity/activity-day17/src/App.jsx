@@ -1,14 +1,28 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppNavbar from "./components/AppNavBar";
+import Home from "./pages/Home";
+import Team from "./pages/Team";
+import TeamDetails from "./pages/TeamDetails";
+
+// const Home = () => <div>Welcome to the App</div>;
 
 function App() {
   return (
-    <div>
-      <AppNavbar />
-    </div>
+    <Router>
+      <div>
+        <AppNavbar />
+
+        {/* Define routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/team" element={<Team />}>
+            <Route path=":id" element={<TeamDetails />} />{" "}
+            {/* Dynamic route for team details */}
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
